@@ -1,0 +1,13 @@
+alias ll='ls -alF'
+alias lt='ls -alFt'
+#alias ls='ls -F'
+alias ls='ls --color=auto -F'
+alias rm='rm -i'
+alias cp='cp -pi'
+alias mv='mv -i'
+alias date='export TZ=GMT && date &&  export TZ=US/Eastern && date'
+alias sync='sync;sync;sync;sync'
+alias mreo='more'
+alias mroe='more'
+set -o vi
+set -o noclobber 

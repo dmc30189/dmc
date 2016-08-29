@@ -1,0 +1,15 @@
+# BlackHawk® CQC™ Carbon Fiber Holster Matte Finish Glock 26 / 27 / 33, BLACK, RH  has decreased from $33.68 to $33.58
+# 3M Safety-Walk Outdoor Tread, Black, 2-Inch by-180-Inch  has decreased from $11.24 to $10.97
+# Burris 300234 Fastfire III with Picatinny Mount 3 MOA Sight (Black)  has decreased from $204.65 to $204.46
+# UTG Integral 30mm Offset QD Mount, 4 Top Slots, 100mm Base  has decreased from $38.85 to $37.82
+# CTEK (56-158) MULTI US 3300 12 Volt Fully Automatic 4 step Battery Charger  has decreased from $69.99 to $67.09
+# BLACKHAWK! American Flag Patch Subdued Olive Drab  has decreased from $2.53 to $2.40
+# 
+#   33.68 33.58 -0.1  BlackHawk® CQC™ Carbon Fiber Holster
+#   33.68 33.58 -0.1  BlackHawk® CQC™ Carbon Fiber Holster
+#   2.53  2.40  -0.13 BLACKHAWK! American Flag Patch Subdued
+#   8.49  8.32  -0.17 Park Tool FR-7 Freewheel Remover
+
+#awk '{print "\t"$(NF-2)"\t"$NF"\t" $NF-$(NF-2)"\t" $1,$2,$3,$4,$5 }' |sort -rn -k3
+
+grep decr ~/amazon|sed -e 's/\$//g' |sed -e 's/,//g' | awk '{printf "\t%.2f\t%.2f\t%.2f\t %s %s %s %s %s\n",$(NF-2),$NF,$NF-$(NF-2),$1,$2,$3,$4,$5 }' |sort -rn -k3
